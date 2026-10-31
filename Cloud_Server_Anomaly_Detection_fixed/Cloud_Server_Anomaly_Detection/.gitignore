@@ -1,0 +1,42 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Project Data (exclude raw and processed data binaries to keep repository light)
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/README.md
+data/synthetic/*
+!data/synthetic/README.md
+
+# Machine learning models (exclude binary models)
+models/*
+!models/README.md
+
+# Plots and figures
+results/figures/*
+results/predictions/*
+results/evaluation/*
+results/reports/*
+
+# Database config and WAMP config
+website/config/db_credentials.php
+
+# OS files
+.DS_Store
+Thumbs.db

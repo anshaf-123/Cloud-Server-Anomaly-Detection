@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CloudGuard | Anomaly Detection Dashboard</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">⚡</div>
+            <div>
+                <h2>CloudGuard</h2>
+                <span>Anomaly Detection</span>
+            </div>
+        </div>
+
+        <nav class="menu">
+
+            <a href="#" class="active">
+                <span>📊</span> Dashboard
+            </a>
+
+            <a href="#">
+                <span>🖥️</span> Server Metrics
+            </a>
+
+            <a href="#">
+                <span>⚠️</span> Anomalies
+            </a>
+
+            <a href="#">
+                <span>📈</span> Analytics
+            </a>
+
+            <a href="#">
+                <span>⚙️</span> Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="status-dot"></span>
+            System Online
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <p class="welcome">SYSTEM MONITORING</p>
+                <h1>Cloud Server Dashboard</h1>
+            </div>
+
+            <div class="header-status">
+                <span class="live-dot"></span>
+                LIVE MONITORING
+            </div>
+
+        </header>
+
+
+        <!-- Overview Cards -->
+        <section class="metrics-grid">
+
+            <div class="metric-card">
+                <div class="card-top">
+                    <span>CPU USAGE</span>
+                    <span class="icon">🖥️</span>
+                </div>
+
+                <h2 id="cpu">--%</h2>
+
+                <div class="progress-bar">
+                    <div class="progress-fill cpu-progress" id="cpu-progress"></div>
+                </div>
+
+                <p>Real-time processor usage</p>
+            </div>
+
+
+            <div class="metric-card">
+                <div class="card-top">
+                    <span>MEMORY</span>
+                    <span class="icon">🧠</span>
+                </div>
+
+                <h2 id="memory">--%</h2>
+
+                <div class="progress-bar">
+                    <div class="progress-fill memory-progress" id="memory-progress"></div>
+                </div>
+
+                <p>Current RAM utilization</p>
+            </div>
+
+
+            <div class="metric-card">
+                <div class="card-top">
+                    <span>DISK USAGE</span>
+                    <span class="icon">💾</span>
+                </div>
+
+                <h2 id="disk">--%</h2>
+
+                <div class="progress-bar">
+                    <div class="progress-fill disk-progress" id="disk-progress"></div>
+                </div>
+
+                <p>Storage utilization</p>
+            </div>
+
+
+            <div class="metric-card system-card">
+                <div class="card-top">
+                    <span>SYSTEM STATUS</span>
+                    <span class="icon">🛡️</span>
+                </div>
+
+                <h2 class="healthy" id="overall-status">HEALTHY</h2>
+
+                <div class="system-status">
+                    <span class="status-dot" id="overall-status-dot"></span>
+                    <span id="overall-status-text">All systems operational</span>
+                </div>
+
+                <p id="last-updated">Waiting for data...</p>
+            </div>
+
+        </section>
+
+
+        <!-- Bottom Section -->
+        <section class="bottom-grid">
+
+            <!-- Monitoring Panel -->
+            <div class="panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Real-Time Monitoring</h2>
+                        <p>Live server resource utilization</p>
+                    </div>
+
+                    <span class="refresh">Auto Refresh: 3s</span>
+                </div>
+
+                <div class="chart-placeholder">
+
+                    <div class="chart-line"></div>
+
+                    <div class="chart-text">
+                        Live monitoring visualization
+                        <span>Charts will be connected next</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Anomaly Panel -->
+            <div class="panel anomaly-panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Anomaly Detection</h2>
+                        <p>Current system analysis</p>
+                    </div>
+
+                    <span class="badge">ACTIVE</span>
+                </div>
+
+
+                <div class="anomaly-status" id="anomaly-status">
+
+                    <div class="shield" id="anomaly-icon">🛡️</div>
+
+                    <h3 id="anomaly-heading">No Critical Anomalies</h3>
+
+                    <p id="anomaly-text">
+                        Your server metrics are currently
+                        within normal operating ranges.
+                    </p>
+
+                    <p class="detection-note">
+                        Detection method: <strong>rule-based thresholds</strong> (current).
+                        ML-based detection (Isolation Forest) is planned for a future release.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/assets/js/script.js"></script>
+
+</body>
+</html>
